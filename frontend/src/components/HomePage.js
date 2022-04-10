@@ -44,20 +44,20 @@ const HomePage = ({search}) => {
     <div className="home">
       <div className="button">
         <div className="block">
-        <button type="button" onClick={previousPage}>Prev</button>
-          <button type="button" onClick={nexPage}>Next</button>
+        <button type="button" onClick={previousPage} className="btn">&#11160; Prev</button>
+          <button type="button" onClick={nexPage} className="btn">Next &#10146;</button>
         </div>
         <p>Page: {pages}</p>
       </div>
-      <div>
+      <div className="homex">
         {loading ? (
           <h2>Loading...</h2>
         ) : error ? (
           <p>It looks like you haven't searched for images yet</p>
         ) : pages === 1 ? (
-          <div className="grid">
+          <div className="grid list">
             <div>
-              {data.getImages.collection.items.slice(0, 11).map((n, index) => <div key={index}>
+              {data.getImages.collection.items.slice(0, 11).map((n, index) => <div key={index}  className="element">
                 <h3>{n.href}</h3>
                 <div>
                   {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
