@@ -8,7 +8,7 @@ const Footer = () => {
           <p>COMPANY</p>
             <ul>
               <li>About</li>
-              <li>Contact us: <a href="mailto">mazonkeu@gmail.com</a></li>
+              <li>Contact us: <a href="mailto:mazonkeu@gmail.com">mazonkeu@gmail.com</a></li>
             </ul>
       </div>
       <small>2022 Azonkeu Ornela's project | Terms of service | Privacy policy | Cookies policy</small>
