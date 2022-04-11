@@ -5,7 +5,7 @@ const HomePage = ({search}) => {
   const [pages, setPages] = useState(1);
 
   const nexPage = () => {
-    if(pages < 10) {
+    if(pages < 10 && data) {
       // increment the page count only if the page number is less than 9
       setPages(pages + 1);
     }else {
@@ -15,7 +15,7 @@ const HomePage = ({search}) => {
 
   const previousPage = () => {
     // decrement the page count only if the page number is greater than 1
-    if(pages > 1) {
+    if(pages > 1 && data) {
       setPages(pages - 1);
     } else {
       return;
@@ -58,9 +58,9 @@ const HomePage = ({search}) => {
           <div className="grid list">
             <div>
               {data.getImages.collection.items.slice(0, 11).map((n, index) => <div key={index}  className="element">
-                <h3>{n.href}</h3>
+                <h4>{n.href}</h4>
                 <div>
-                  {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                  {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                 </div>
               </div>)}
             </div>
@@ -68,10 +68,10 @@ const HomePage = ({search}) => {
         ) : pages === 2 ? (
           <div className="grid">
             <div>
-              {data.getImages.collection.items.slice(11, 21).map((n, index) => <div key={index}>
-                <h3>{n.href}</h3>
+              {data.getImages.collection.items.slice(11, 21).map((n, index) => <div key={index} className="element">
+                <h4>{n.href}</h4>
                 <div>
-                  {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                  {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                 </div>
               </div>)}
             </div>
@@ -79,10 +79,10 @@ const HomePage = ({search}) => {
         ) : pages === 3 ? (
           <div className="grid">
             <div>
-              {data.getImages.collection.items.slice(21, 31).map((n, index) => <div key={index}>
-                <h3>{n.href}</h3>
+              {data.getImages.collection.items.slice(21, 31).map((n, index) => <div key={index} className="element">
+                <h4>{n.href}</h4>
                 <div>
-                  {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                  {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                 </div>
               </div>)}
           </div>
@@ -90,10 +90,10 @@ const HomePage = ({search}) => {
           ) : pages === 4 ? (
             <div className="grid">
               <div>
-                {data.getImages.collection.items.slice(31, 41).map((n, index) => <div key={index}>
+                {data.getImages.collection.items.slice(31, 41).map((n, index) => <div key={index} className="element">
                   <h3>{n.href}</h3>
                   <div>
-                    {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                    {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                   </div>
                 </div>)}
               </div>
@@ -101,10 +101,10 @@ const HomePage = ({search}) => {
           ) : pages === 5 ? (
             <div className="grid">
               <div>
-                {data.getImages.collection.items.slice(41, 51).map((n, index) => <div key={index}>
+                {data.getImages.collection.items.slice(41, 51).map((n, index) => <div key={index} className="element">
                   <h3>{n.href}</h3>
                   <div>
-                    {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                    {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                   </div>
                 </div>)}
               </div>
@@ -112,10 +112,10 @@ const HomePage = ({search}) => {
           ) : pages === 6 ? (
             <div className="grid">
               <div>
-                {data.getImages.collection.items.slice(51, 61).map((n, index) => <div key={index}>
+                {data.getImages.collection.items.slice(51, 61).map((n, index) => <div key={index} className="element">
                   <h3>{n.href}</h3>
                   <div>
-                    {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                    {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                   </div>
                 </div>)}
               </div>
@@ -123,10 +123,10 @@ const HomePage = ({search}) => {
           ) : pages === 7 ? (
             <div className="grid">
               <div>
-                {data.getImages.collection.items.slice(61, 71).map((n, index) => <div key={index}>
+                {data.getImages.collection.items.slice(61, 71).map((n, index) => <div key={index} className="element">
                   <h3>{n.href}</h3>
                   <div>
-                    {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                    {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                   </div>
                 </div>)}
               </div>
@@ -134,10 +134,10 @@ const HomePage = ({search}) => {
           ) : pages === 8 ? (
             <div className="grid">
               <div>
-                {data.getImages.collection.items.slice(71, 81).map((n, index) => <div key={index}>
+                {data.getImages.collection.items.slice(71, 81).map((n, index) => <div key={index} className="element">
                   <h3>{n.href}</h3>
                   <div>
-                    {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                    {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                   </div>
                 </div>)}
               </div>
@@ -145,10 +145,10 @@ const HomePage = ({search}) => {
           ) : pages === 9 ? (
             <div className="grid">
               <div>
-                {data.getImages.collection.items.slice(81, 91).map((n, index) => <div key={index}>
+                {data.getImages.collection.items.slice(81, 91).map((n, index) => <div key={index} className="element">
                   <h3>{n.href}</h3>
                   <div>
-                    {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                    {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                   </div>
                 </div>)}
               </div>
@@ -156,10 +156,10 @@ const HomePage = ({search}) => {
           ) : (
             <div className="grid">
               <div>
-                {data.getImages.collection.items.slice(91).map((n, index) => <div key={index}>
+                {data.getImages.collection.items.slice(91).map((n, index) => <div key={index} className="element">
                   <h3>{n.href}</h3>
                   <div>
-                    {n.data.map((n, index) => <div key={index}><span>{n.title}</span><h4>{n.description}</h4></div>)}
+                    {n.data.map((n, index) => <div key={index}><h3>{n.title}</h3><p>{n.description}</p></div>)}
                   </div>
                 </div>)}
               </div>
