@@ -3,16 +3,20 @@
 This website displays a list of images from the NASA API. Users can search for specific images. 
 
 
-### Getting Started
+## 🚀 Install and run the project locally
+**Please follow these steps in order.**
 
-- Create a Github repository.
-- Clone the repository locally.
-- Create a **develop** branch and push it to Github.
-- Set the **develop** branch as the *defaut* branch on Github.
-- Create a feature branch under the **develop** branch.
-   
-## 🖥️ live Demo
-Here is the [live demo]()
+> 1. Clone the repository on your local machine `git clone https://github.com/Azonkeu/Nasa.git`
+> 2. Open the project in your code editor
+> 3. Open the terminal
+> 4. `cd Backend`
+> 5. install all the dependencies `npm install`
+> 6. Start apollo server `npm start`
+> 7. Open another terminal
+> 8. `cd frontend`
+> 9. install all the dependencies using --force due to a recent React update `npm install --force`
+> 10. start the React application `npm start`
+ 
 
 ### Built With
 
@@ -30,7 +34,7 @@ Here is the [live demo]()
    - **Apollo server**
    - **Apollo client**
 
-## 🧑👩 Author
+## 👩 Author
 
 - Github: [Azonkeu](https://github.com/Azonkeu)
   
